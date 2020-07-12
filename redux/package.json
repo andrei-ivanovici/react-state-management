@@ -1,0 +1,79 @@
+{
+  "name": "storybook-sample",
+  "version": "0.9.6",
+  "private": true,
+  "dependencies": {
+    "clsx": "^1.0.4",
+    "react": "^16.13.0",
+    "react-dom": "^16.9.0",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5"
+  },
+  "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "start": "webpack-dev-server --progress --config ./.build-scripts/webpack.dev.config.js",
+    "build": "webpack --config ./.build-scripts/webpack.prod.config.js",
+    "build:progress": "npm run build -- --progress",
+    "build:stats": "webpack --progress --config ./.build-scripts/webpack.prod.config.js --profile --stats --json >stats.json",
+    "test": "jest",
+    "predeploy:site": "npm run build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/helper-call-delegate": "^7.8.7",
+    "@babel/preset-env": "^7.9.6",
+    "@testing-library/jest-dom": "^5.5.0",
+    "@types/algoliasearch": "^3.34.5",
+    "@types/history": "^4.7.2",
+    "@types/jest": "^25.2.1",
+    "@types/lodash-es": "^4.17.3",
+    "@types/node": "13.9.1",
+    "@types/react": "16.9.23",
+    "@types/react-dom": "16.9.5",
+    "@types/react-redux": "^7.1.9",
+    "@types/react-router": "^5.0.3",
+    "@typescript-eslint/eslint-plugin": "^2.5.0",
+    "@typescript-eslint/parser": "^2.5.0",
+    "babel-jest": "^25.5.1",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.5.3",
+    "eslint": "^6.6.0",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.5.0",
+    "esm": "^3.2.25",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.2.0",
+    "jest": "^25.5.2",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.0",
+    "sass-loader": "^8.0.2",
+    "source-map-explorer": "^2.1.1",
+    "style-loader": "^1.2.0",
+    "ts-jest": "^25.4.0",
+    "ts-loader": "^7.0.1",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "typescript": "^3.8.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2",
+    "webpack-stats-plugin": "^0.3.1",
+    "yargs": "^15.3.1"
+  }
+}
