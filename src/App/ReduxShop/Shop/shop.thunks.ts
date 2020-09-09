@@ -1,17 +1,10 @@
 import {setItems} from "./shop.actions";
-import {data} from "../../../data-sample";
-
-function timeoutPromise<T>(callBack: () => T, timeout): Promise<T> {
-    return new Promise(resolve => {
-        setTimeout(resolve(callBack()), timeout);
-    });
-}
+import {dataService} from "../../data.service";
 
 export function loadItems() {
+    const api = dataService();
     return (dispatch) => {
-        timeoutPromise(() => data as any, 1000)
+        api.getItems()
             .then(items => dispatch(setItems(items)));
-
     };
-
 }

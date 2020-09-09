@@ -15,12 +15,8 @@ export function App() {
                 </Route>
                 <Route path={"/redux/*"} element={<ReduxShop/>}/>
                 <Route path={"/vanilla/*"} element={<VanillaShop/>}/>
-                <Route path={"/context"}>
-                    <ContextShop/>
-                </Route>
+                <Route path={"/context/*"} element={<ContextShop/>}/>
             </Routes>
         </BrowserRouter>
-
-
     </div>;
 }

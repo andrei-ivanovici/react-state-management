@@ -9,7 +9,7 @@ const initialState: AppState = {
     cart: {
         items: [],
         totalPrice: 0,
-        totalItems:0
+        totalItems: 0
     },
     shop: {
         items: [],

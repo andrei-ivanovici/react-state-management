@@ -3,7 +3,6 @@ import {Totals} from "./cart.model";
 import {Product} from "../../../shop.model";
 
 export enum CartActionType {
-    Buy = "CART_Buy",
     Add = "CART_Add",
     UpdateItemCount = "CART_UpdateItemCount",
     UpdateTotals = "CART_UpdateTotals",
@@ -11,10 +10,6 @@ export enum CartActionType {
 }
 
 export type  CartAction = Action<CartActionType>;
-
-export interface BuyAction extends CartAction {
-    type: CartActionType.Buy;
-}
 
 export interface UpdateTotalsAction extends CartAction {
     type: CartActionType.UpdateTotals;
@@ -36,12 +31,6 @@ export interface UpdateItemCountAction extends CartAction {
 export interface RemoveItemCartAction extends CartAction {
     type: CartActionType.RemoveItem;
     itemId: string;
-}
-
-export function buy(): BuyAction {
-    return {
-        type: CartActionType.Buy
-    };
 }
 
 export function updateCartWithItem(item: Product): AddItemCartAction {
